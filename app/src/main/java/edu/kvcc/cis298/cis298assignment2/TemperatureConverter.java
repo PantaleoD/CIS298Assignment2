@@ -38,6 +38,8 @@ public class TemperatureConverter extends AppCompatActivity {
     private String mFormulaString;                // formula
     private String outputTemp;
 
+    String resultString;
+
     //  ********************** Convert Button Variable ***************
     private Button mConvertButton;                 //  BUTTON VARIABLE - STARTS THE setOnClickListener METHOD
 
@@ -119,8 +121,14 @@ public class TemperatureConverter extends AppCompatActivity {
 
         if (savedInstanceState != null){
             Log.i(TAG, "onSavedInstanceState get string");
-            outputTemp = savedInstanceState.getString(KEY_RESULT, "");
+            resultString = savedInstanceState.getString(KEY_RESULT, "");
             mFormulaString = savedInstanceState.getString(KEY_FORMULA, "");
+
+            TextView result = (TextView)findViewById(R.id.result_text);            // IN ORDER TO SEE RESULT/FORMULA W/ ROTATION..NEED TO DISPLAY IT
+            result.setText(resultString);                                            // WITHIN THE DECISION IF A ROTATION OCCURED ((savedInstanceState != null)
+
+            TextView formulaText =  (TextView)findViewById(R.id.formula_text);
+            formulaText.setText(mFormulaString);
         }
     }            // ********* end  of OnCreate
     // ******************** code to save the result and formula for display upon ROTATION
@@ -130,7 +138,7 @@ public class TemperatureConverter extends AppCompatActivity {
 
         super.onSaveInstanceState(savedInstanceState);
         Log.i(TAG, "onSavedInstanceState put string");                         // THIS INDICATES IT HITS THIS METHOD
-        savedInstanceState.putString(KEY_RESULT,  outputTemp.toString());
+        savedInstanceState.putString(KEY_RESULT,  resultString );
         savedInstanceState.putString(KEY_FORMULA, mFormulaString.toString());
     }
 
@@ -141,18 +149,12 @@ public class TemperatureConverter extends AppCompatActivity {
         DecimalFormat decimalFormat = new DecimalFormat("#0.00");
          outputTemp = decimalFormat.format(outputConvertedTemp);
 
-        //  CREATION OF STRING TO OUTPUT FROM...TO VALUES
-        //     USED SUBSTRING TO OUTPUT THE FIRST LETTER OF EACH SCALE (C,F,K,R)
+        //  CREATION OF STRING TO OUTPUT FROM...TO VALUES                                   \u2103 = 'C'     \u2109  = 'F'
+        //     USED SUBSTRING TO OUTPUT THE FIRST LETTER OF EACH SCALE (C,F,K,R)            \u00B0  is the unicode symbol in java
 
         // CANT GET SUPERSCRIPT TO WORK !!!!!! *****************************(getText(R.string.left_celsius).toString())
-        String resultString =  stringInputTemp + " Degrees " + FromType.substring(0,1) + " Equals " +
-                                                     outputTemp  + " Degrees "   + ToType.substring(0,1)   ;
-// THIS DOESN'T WORK - WHY???
-     //   String resultString =  stringInputTemp + " " + (getText(R.string.degrees).toString()) + FromType.substring(0,1) + " = " +
-     //                                       outputTemp  + (getText(R.string.degrees).toString())+ " " + ToType.substring(0,1)   ;
-
-     //    String resultString = stringInputTemp +  (Html.fromHtml("<sup>^0</sup>")).toString() + FromType.substring(0,1) + " = " +
-     //                               outputTemp  + Html.fromHtml("<sup>^0</sup>")+  ToType.substring(0,1)  ;
+         resultString =  stringInputTemp + "\u00B0"  + FromType.substring(0,1) + " Equals " +
+                                                     outputTemp  + "\u00B0"  + ToType.substring(0,1)   ;
 
       // SET TEXTVIEW VALUES TO OUTPUT RESULT STRING AND FORMULA STRING
 

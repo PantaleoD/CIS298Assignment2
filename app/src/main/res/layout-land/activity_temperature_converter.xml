@@ -17,7 +17,7 @@
               android:layout_gravity="top|right"
               android:padding="12dp"/>
 
-    <LinearLayout
+   <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_gravity="center_vertical">
@@ -118,18 +118,18 @@
     <TextView
             android:id="@+id/result_text"
             android:text=""
-            android:layout_width="420dp"
-            android:layout_height= "30dp"
-            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height= "wrap_content"
+            android:layout_gravity="center_horizontal"
             android:textStyle="bold"
            />
 
     <TextView
         android:id="@+id/formula_text"
         android:text=""
-        android:layout_gravity="left"
-        android:layout_width="242dp"
+        android:layout_gravity="center_horizontal"
         android:typeface="serif"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
 

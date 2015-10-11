@@ -125,27 +125,29 @@
             android:layout_gravity="fill"
             android:layout_margin="@dimen/activity_horizontal_margin"/>
 
+
         <TextView
             android:id="@+id/result_text"
             android:text=""
-            android:layout_width="420dp"
-            android:layout_height= "wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height= "wrap_content"
             android:textSize="@dimen/activity_horizontal_margin"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textStyle="bold"
             android:padding="24dp"/>
 
         <TextView
-            android:padding="24dp"
             android:id="@+id/formula_text"
             android:text=""
             android:layout_gravity="center_horizontal"
-            android:layout_width="242dp"
+            android:layout_width="wrap_content"
             android:typeface="serif"
             android:layout_height="wrap_content"
             android:textSize="@dimen/activity_horizontal_margin"
-            android:layout_weight="0.29"/>
+            android:layout_weight="0.29"
+            android:textStyle="bold"
+            android:padding="24dp"/>
 
     </LinearLayout>
 
