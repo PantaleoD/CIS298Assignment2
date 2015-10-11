@@ -1,6 +1,61 @@
 <resources>
     <string name="app_name">CIS298Assignment2</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="heading"> Temperature Converter Prog #2 Pantaleo</string>
+
     <string name="action_settings">Settings</string>
+
+    <string name="initial_input">InputTemp</string>
+    <string name="underscore">------------------------------------------------------</string>
+    <string name="from_to">From                                                   To</string>
+
+    <string name="result_text">result</string>
+    <string name="formula_text">formula_text</string>
+
+
+    <!--  TOASTS -->
+    <string name = "toast">You cannot convert using the same temp scale..change one!</string>
+    <string name = "toast_input_not_positive">Enter a positive value for the Temperature</string>
+    <string name="toast_bad_input">Input A Number before clicking Convert</string>
+    <string name="toast_input_not_valid">Input Temp missing or invalid..try again!</string>
+    <string name="toast_no_rb_selected">Select a To and From Radio Button ... try again!</string>
+    <string name="toast_rb_test">Boolean testing!</string>
+
+
+  <!--  <string name="degrees">Html.fromHtml("<sup>^0</sup>")).toString()"<sup>0</sup>" </string> -->
+
+    <!-- USED TO LABEL THE RADIO BUTTONS ...
+                DUPLICATE BECAUSE DUPLICATED ON LAYOUT AND NEED TO CHOOSE A 'TO' AND 'FROM' RB'S -->
+        <string name="left_celsius">Celsius</string>
+        <string name="left_fahrenheit">Fahrenheit</string>
+        <string name="left_kelvin">Kelvin</string>
+        <string name="left_rankin">Rankin</string>
+
+        <string name="right_celsius">Celsius</string>
+        <string name="right_fahrenheit">Fahrenheit</string>
+        <string name="right_kelvin">Kelvin</string>
+        <string name="right_rankin">Rankin</string>
+
+        <string name="convert_CAPS">CONVERT</string>
+        <string name="convert_lcase">Convert</string>
+
+
+        <!-- USED TO DISPLAY THE CALCULATION UNDER THE RESULTS IN THE LAYOUT *********** -->
+    <string name="celsius__to_fahrenheit_calc">F =  C × 1.8 + 32</string>
+    <string name="celsius__to_kelvin_calc">K = C  + 273.15</string>
+    <string name="celsius__to_rankin_calc">Ra =  C × 1.8 + 32 + 459.67</string>
+
+
+    <string name="fahrenheit_to_celsius_calc">C = ( F - 32) / 1.8</string>
+    <string name="fahrenheit_to_kelvin_calc">K = ( F + 459.67) / 1.8</string>
+    <string name="fahrenheit_to_rankin_calc"> Ra =  F + 459.67</string>
+
+    <string name="kelvin__to_celsius_calc"> C = K - 273.15</string>
+    <string name="kelvin__to_fahrenheit_calc">F = K × 1.8 - 459.67</string>
+    <string name="kelvin__to_rankin_calc"> Ra = K × 1.8</string>
+
+    <string name="rankin__to_celsius_calc">C = ( Ra - 32 - 459.67) / 1.8</string>
+    <string name="rankin__to_fahrenheit_calc">F =  Ra - 459.67</string>
+    <string name="rankin__to_kelvin_calc">[K =  Ra / 1.8</string>
+
 </resources>

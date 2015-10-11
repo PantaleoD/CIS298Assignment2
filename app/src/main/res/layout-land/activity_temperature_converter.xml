@@ -1,0 +1,140 @@
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+      android:orientation="vertical"
+     android:paddingLeft="@dimen/activity_horizontal_margin"
+     android:paddingRight="@dimen/activity_horizontal_margin"
+     android:paddingTop="@dimen/activity_vertical_margin"
+     android:paddingBottom="@dimen/activity_vertical_margin"
+      tools:context=".TemperatureConverter"
+              android:backgroundTint="@android:color/background_dark">
+
+      <TextView android:text="@string/heading"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="top|right"
+              android:padding="12dp"/>
+
+    <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center_vertical">
+
+
+        <TextView
+        android:text="@string/convert_lcase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        />
+
+        <EditText
+            android:id="@+id/initial_input"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:maxWidth="2dp"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+   </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/left_from_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/left_celsius"
+                    android:text="@string/left_celsius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"/>
+                <RadioButton
+                    android:id="@+id/left_fahrenheit"
+                    android:text="@string/left_fahrenheit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/left_kelvin"
+                    android:text="@string/left_kelvin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/left_rankin"
+                    android:text="@string/left_rankin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+
+
+             <RadioGroup
+                 android:id="@+id/right_to_group"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_gravity="center_horizontal">
+
+                 <RadioButton
+                     android:id="@+id/right_celsius"
+                     android:text="@string/right_celsius"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:checked="false"/>
+                 <RadioButton
+                     android:id="@+id/right_fahrenheit"
+                     android:text="@string/right_fahrenheit"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"/>
+                 <RadioButton
+                     android:id="@+id/right_kelvin"
+                     android:text="@string/right_kelvin"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"/>
+                 <RadioButton
+                     android:id="@+id/right_rankin"
+                     android:text="@string/right_rankin"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:checked="false"/>
+             </RadioGroup>
+
+
+     <Button
+         android:id="@+id/convert_CAPS"
+         android:text="CONVERT"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="fill_horizontal"
+         android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+
+
+    <TextView
+            android:id="@+id/result_text"
+            android:text=""
+            android:layout_width="420dp"
+            android:layout_height= "30dp"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+           />
+
+    <TextView
+        android:id="@+id/formula_text"
+        android:text=""
+        android:layout_gravity="left"
+        android:layout_width="242dp"
+        android:typeface="serif"
+        android:layout_height="wrap_content"
+        />
+
+
+</LinearLayout>
+
+
+
