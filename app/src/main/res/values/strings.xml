@@ -14,12 +14,13 @@
 
 
     <!--  TOASTS -->
-    <string name = "toast">You cannot convert using the same temp scale..change one!</string>
+    <string name = "toast_duplicate_rbs">You cannot convert using the same temp scale..change one!</string>
     <string name = "toast_input_not_positive">Enter a positive value for the Temperature</string>
     <string name="toast_bad_input">Input A Number before clicking Convert</string>
     <string name="toast_input_not_valid">Input Temp missing or invalid..try again!</string>
     <string name="toast_no_rb_selected">Select a To and From Radio Button ... try again!</string>
     <string name="toast_rb_test">Boolean testing!</string>
+
 
 
   <!--  <string name="degrees">Html.fromHtml("<sup>^0</sup>")).toString()"<sup>0</sup>" </string> -->

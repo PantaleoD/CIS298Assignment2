@@ -35,6 +35,5 @@ I used the programs done in class primarily and stack overflow and talked with y
 
 ## Known Problems, Issues, And/Or Errors in the Program
 
-   if you have an error with the same radio buttons on both sides..you may get 2 errors not just one depending on what else
-   you've done wrong.
+   looks like they are all fixed now! 
 
